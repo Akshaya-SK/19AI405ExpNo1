@@ -107,5 +107,5 @@ agent.run()
 </div>
 
 <h3>OUTPUT</h3>
-<!-- Replace the src link with your actual image URL -->
-<img src="https://github.com/user-attachments/assets/dc761611-d0b7-458c-a600-fe535eb3e975/your-output-image.png" alt="Program Output" style="width:100%;max-width:600px;border:1px solid #ccc;">
+![image](https://github.com/user-attachments/assets/fa1a1daa-5201-42a6-b37a-1b0e8e26eb24)
+
