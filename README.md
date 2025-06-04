@@ -40,3 +40,64 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+
+<h3>PROGRAM</h3>
+```
+import random
+
+# Define constants
+ROOMS = ["Room1", "Room2"]
+FEVER_THRESHOLD = 98.5
+
+class Patient:
+    def __init__(self, temperature):
+        self.temperature = temperature
+        self.treated = False
+
+    def is_unhealthy(self):
+        return self.temperature > FEVER_THRESHOLD and not self.treated
+
+class MedicinePrescribingAgent:
+    def __init__(self, environment):
+        self.environment = environment  # {room_name: Patient}
+        self.current_room = random.choice(ROOMS)
+        self.performance = 0
+
+    def sense(self):
+        patient = self.environment[self.current_room]
+        return self.current_room, patient.temperature
+
+    def treat(self):
+        patient = self.environment[self.current_room]
+        if patient.is_unhealthy():
+            print(f"Treating patient in {self.current_room} with temperature {patient.temperature}")
+            patient.treated = True
+            self.performance += 1
+        else:
+            print(f"No treatment needed in {self.current_room} (Temp: {patient.temperature})")
+
+    def move(self):
+        next_room = ROOMS[1] if self.current_room == ROOMS[0] else ROOMS[0]
+        print(f"Moving from {self.current_room} to {next_room}")
+        self.current_room = next_room
+        self.performance -= 1
+
+    def run(self, cycles=4):
+        for _ in range(cycles):
+            print("\n--- New Cycle ---")
+            room, temp = self.sense()
+            self.treat()
+            self.move()
+
+        print(f"\nFinal Performance Score: {self.performance}")
+
+# Initialize environment with patients having random temperatures
+environment = {
+    "Room1": Patient(random.uniform(97.0, 101.0)),
+    "Room2": Patient(random.uniform(97.0, 101.0))
+}
+
+# Create and run the agent
+agent = MedicinePrescribingAgent(environment)
+agent.run()
+```
