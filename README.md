@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/949982e4-b377-4bb6-9cc8-21b41b3e04a5)<h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
+<h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
 <h3>Name: Saravanan N</h3>
 <h3>Register Number/Staff Id: TSML006</h3>
 
