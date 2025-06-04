@@ -1,45 +1,51 @@
-<h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
+![image](https://github.com/user-attachments/assets/949982e4-b377-4bb6-9cc8-21b41b3e04a5)<h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
 <h3>Name: Saravanan N</h3>
 <h3>Register Number/Staff Id: TSML006</h3>
 
-
 <h3>AIM:</h3>
-<br>
 <p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
-<br>
+
 <h3>Theory</h3>
 <h3>Medicine prescribing agent:</h3>
-<p>Such this agent prescribes medicine for fever (greater than 98.5 degrees) which we consider here as unhealthy, by the user temperature input, and another environment is rooms in the hospital (two rooms). This agent has to consider two factors one is room location and an unhealthy patient in a random room, the agent has to move from one room to another to check and treat the unhealthy person. The performance of the agent is calculated by incrementing performance and each time after treating in one room again it has to check another room so that the movement causes the agent to reduce its performance. Hence, agents prescribe medicine to unhealthy.</p>
+<p>This agent prescribes medicine for fever (temperature greater than 98.5°F), which is considered unhealthy. The agent receives temperature input and checks patients in two hospital rooms. It must consider room location and whether a patient is unhealthy. The agent moves between rooms to diagnose and treat patients. Each treatment increases performance, while each room switch decreases performance. The agent’s goal is to effectively prescribe medicine.</p>
+
 <hr>
+
 <h3>PEAS DESCRIPTION:</h3>
-<table>
+<table border="1" cellspacing="0" cellpadding="6">
   <tr>
-    <td><strong>Agent Type</strong></td>
-    <td><strong>Performance</strong></td>
-     <td><strong>Environment</strong></td>
-    <td><strong>Actuators</strong></td>
-    <td><strong>Sensors</strong></td>
+    <th>Agent Type</th>
+    <th>Performance</th>
+    <th>Environment</th>
+    <th>Actuators</th>
+    <th>Sensors</th>
   </tr>
-    <tr>
-    <td><strong>Medicine prescribing agent</strong></td>
-    <td><strong>Treating unhealthy, agent movement</strong></td>
-     <td><strong>Rooms, Patient</strong></td>
-    <td><strong>Medicine, Treatment</strong></td>
-    <td><strong>Location, Temperature of patient</strong></td>
+  <tr>
+    <td>Medicine prescribing agent</td>
+    <td>Treating unhealthy, agent movement</td>
+    <td>Rooms, Patients</td>
+    <td>Medicine, Treatment</td>
+    <td>Location, Temperature of patient</td>
   </tr>
 </table>
+
 <hr>
-<H3>DESIGN STEPS</H3>
-<h3>STEP 1:Identifying the input:</h3>
-<p>Temperature from patients, Location.</p>
-<h3>STEP 2:Identifying the output:</h3>
-<p>Prescribe medicine if the patient in a random has a fever.</p>
-<h3>STEP 3:Developing the PEAS description:</h3>
-<p>PEAS description is developed by the performance, environment, actuators, and sensors in an agent.</p>
-<h3>STEP 4:Implementing the AI agent:</h3>
-<p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
-<h3>STEP 5:</h3>
-<p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+
+<h3>DESIGN STEPS</h3>
+<h4>STEP 1: Identifying the input</h4>
+<p>Temperature from patients, Room location.</p>
+
+<h4>STEP 2: Identifying the output</h4>
+<p>Prescribe medicine if the patient has a fever.</p>
+
+<h4>STEP 3: Developing the PEAS description</h4>
+<p>Defined as above using Performance, Environment, Actuators, and Sensors.</p>
+
+<h4>STEP 4: Implementing the AI agent</h4>
+<p>The agent treats unhealthy patients and moves between rooms to diagnose others.</p>
+
+<h4>STEP 5: Measuring performance</h4>
+<p>+1 for each treatment, -1 for each movement between rooms.</p>
 
 <h3>PROGRAM</h3>
 <div style="background:#f4f4f4;border:1px solid #ccc;padding:10px;overflow-x:auto;white-space:pre;font-family:monospace;">
@@ -100,6 +106,6 @@ agent.run()
 </code></pre>
 </div>
 
-
 <h3>OUTPUT</h3>
-<img src= ![image](https://github.com/user-attachments/assets/dc761611-d0b7-458c-a600-fe535eb3e975)> </img>
+<!-- Replace the src link with your actual image URL -->
+<img src="https://github.com/user-attachments/assets/dc761611-d0b7-458c-a600-fe535eb3e975/your-output-image.png" alt="Program Output" style="width:100%;max-width:600px;border:1px solid #ccc;">
