@@ -45,7 +45,6 @@
 ```
 import random
 
-# Define constants
 ROOMS = ["Room1", "Room2"]
 FEVER_THRESHOLD = 98.5
 
@@ -91,13 +90,11 @@ class MedicinePrescribingAgent:
 
         print(f"\nFinal Performance Score: {self.performance}")
 
-# Initialize environment with patients having random temperatures
 environment = {
     "Room1": Patient(random.uniform(97.0, 101.0)),
     "Room2": Patient(random.uniform(97.0, 101.0))
 }
 
-# Create and run the agent
 agent = MedicinePrescribingAgent(environment)
 agent.run()
 ```
